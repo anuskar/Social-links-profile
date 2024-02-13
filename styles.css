@@ -2,11 +2,34 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Inter", sans-serif;
     font-size: 14px;
+    background-color: hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 100%);
+    width: 500px
 }
 
 .profile-container{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: hsl(0, 0%, 12%);
+    padding: 20px;
+    text-align: center;
+}
+
+.name{
+    font-weight: 700;
+}
+
+.location{
+    font-weight: 600;
+    color: hsl(75, 94%, 57%);
+}
+
+button {
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: 500;
+    width: 100%;
 }
