@@ -1,35 +1,96 @@
+:root {
+    --primary-color: hsl(0, 0%, 100%);
+    --background-color: hsl(0, 0%, 8%);
+    --container-background-color: hsl(0, 0%, 12%);
+    --button-background-color: hsl(0, 0%, 20%);
+    --highlight-color: hsl(75, 94%, 57%);
+    --font-family: "Inter", sans-serif;
+}
+
 body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-family);
     font-size: 14px;
-    background-color: hsl(0, 0%, 8%);
-    color: hsl(0, 0%, 100%);
-    width: 500px
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
 }
 
 .profile-container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: hsl(0, 0%, 12%);
-    padding: 20px;
-    text-align: center;
+    background-color: var(--container-background-color);
+    padding: 30px;
+    border-radius: 12px;
+    width: 270px;
 }
 
-.name{
-    font-weight: 700;
+h1{
+    font-weight: 500;
+    font-size: 25px;
+    margin: 15px 0 0;
+
 }
 
 .location{
-    font-weight: 600;
-    color: hsl(75, 94%, 57%);
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--highlight-color);
+    margin: 0px;
+}
+
+.description{
+    font-weight: 100;
+    font-size: 13px;
+    color: var(--primary-color);
+}
+
+.social-platforms-container{
+    padding-top: 20px;
+    width: 100%;
 }
 
 button {
     padding: 10px 20px;
-    text-align: center;
-    font-weight: 500;
+    font-weight: 700;
     width: 100%;
+    background-color: var(--button-background-color);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: none;
+    color: var(--primary-color);
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--highlight-color);
+    color: var(--button-background-color);
+    outline: none;
+}
+
+button:focus, button:focus-visible {
+    border: 1px solid;
+    border-color: hsl(75, 94%, 57%);
+    outline: none;
+}
+
+@media (min-width: 376px){
+    .profile-container{
+        width: 300px;
+    }
 }
